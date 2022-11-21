@@ -1,7 +1,4 @@
-pipeline {
-  agent {
-    kubernetes {
-      yaml '''
+podTemplate(yaml: '''
 spec:
   containers:
   - name: python
@@ -10,17 +7,13 @@ spec:
     - sleep
     - 99d
   terminationGracePeriodSeconds: 3
-      '''
-      defaultContainer 'python'
-      retries 2
-    }
-  }
-  stages {
-    stage('Build') {
-      steps {
-        sh 'pip install -r requirements.txt'
-        sh 'python helloworld.py'
-      }
+''') {
+  retry(count: 2, conditions: [kubernetesAgent()]) {
+    node(POD_LABEL) {
+        container('python') {
+            sh 'pip install -r requirements.txt'
+            sh 'python helloworld.py'
+        }
     }
   }
 }
