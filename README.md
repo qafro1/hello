@@ -41,7 +41,7 @@ When you push code to a source code branch in GitHub for one of those listed ima
 
 Documentation to Set up automated builds for docker: https://docs.docker.com/docker-hub/builds
 
-<br>Create docker image from cli:</br>
+<br>To push a new tag to dockerhub repository from cli:</br>
 1. docker login
 2. docker images
 3. docker tag local-image:tagname new-repo:tagname
