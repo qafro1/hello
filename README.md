@@ -35,14 +35,14 @@ However - This project is using a sample DockerHub account for repo to get start
 Check if docker is installed: docker --version,if not install docker: https://docs.docker.com/
 
 Dockerhub: Docker Hub can automatically build images from source code in an external repository and automatically push the built image to your Docker repositories.
-This project has been configured and setup it will be using docker image: qafro/docker image
+<n>This project has been configured and setup it will be using docker image: qafro/<docker image> </n>
 When you push code to a source code branch in GitHub for one of those listed image tags, the push uses a webhook to trigger a new build, which produces a Docker image. The built image is then pushed to the Docker Hub registry.
 Documentation to Set up automated builds for docker: https://docs.docker.com/docker-hub/builds
 
-Create docker image from cli:
-docker login
-docker tag local-image:tagname new-repo:tagname
-docker push new-repo:tagname
+<br>Create docker image from cli:</br>
+1. docker login
+2. docker tag local-image:tagname new-repo:tagname
+3. docker push new-repo:tagname
 
 
 Minikube & kubectl should be configured according to the Documentations.
