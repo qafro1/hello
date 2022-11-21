@@ -11,7 +11,7 @@ Prerequisites
 4. kubectl
 
 Documentation for the above are provided below:
-<br> Docker: https://docs.docker.com/v17.12/install/ </br>
+<br> Docker: https://docs.docker.com/</br>
 <br>Dockerhub: https://hub.docker.com/</br>
 <br>minikube: https://kubernetes.io/docs/tasks/tools/install-minikube/</br>
 <br>kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/</br>
@@ -32,7 +32,7 @@ As discussed in the prerequisites the following needs to be checked or installed
 However - This project is using a sample DockerHub account for repo to get started and recommends to create your own account then follow procedures for future useage.
 
 <br>Configuration</br>
-Check if docker is installed: docker --version,if not install docker: https://docs.docker.com/v17.12/install/
+Check if docker is installed: docker --version,if not install docker: https://docs.docker.com/
 
 Dockerhub: Docker Hub can automatically build images from source code in an external repository and automatically push the built image to your Docker repositories.
 This project has been configured and setup it will be using docker image: qafro/hello-python 
@@ -44,7 +44,7 @@ Minikube & kubectl should be configured according to the Documentations.
 <br>Testing</br>
 In the dev environment - steps to run test locally.
 1. Check if docker is installed: docker --version.
-2. Run a clone of the project: git clone https://github.com/qafro1/app.git and change into that directory : cd app
+2. Run a clone of the project: git clone https://github.com/qafro1/hello.git and change into that directory : cd app
 3. Build the app which build the image of app with tag hello-python: docker build -t hello-python .
 4. Run the app locally: docker run --name hello-python -p 5000:5000 hello-python
 5. Test the app if it's running successfully with port 5000: curl http://localhost:5000
