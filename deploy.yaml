@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hello-python
-        image: qafro/hello-python:latest #image of hello python
+        image: qafro/python-hello:v1 #image of hello python
         imagePullPolicy: Always
         resources:
           limits:
