@@ -35,7 +35,7 @@ However - This project is using a sample DockerHub account for repo to get start
 Check if docker is installed: docker --version,if not install docker: https://docs.docker.com/
 
 Dockerhub: Docker Hub can automatically build images from source code in an external repository and automatically push the built image to your Docker repositories.
-This project has been configured and setup it will be using docker image: qafro/'docker image'
+This project has been configured and setup it will be using docker image: qafro/<-docker image->
 
 When you push code to a source code branch in GitHub for one of those listed image tags, the push uses a webhook to trigger a new build, which produces a Docker image. The built image is then pushed to the Docker Hub registry.
 Documentation to Set up automated builds for docker: https://docs.docker.com/docker-hub/builds
