@@ -9,10 +9,10 @@ spec:
     command:
     - sleep
     - 99d
-  terminationGracePeriodSeconds: 3
+  //terminationGracePeriodSeconds: 3
       '''
       defaultContainer 'python'
-      retries 2
+    //  retries 2
     }
   }
   stages {
