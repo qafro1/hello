@@ -51,18 +51,18 @@ Minikube & kubectl should be configured according to the Documentations.
 <br>Testing</br>
 In the dev environment - steps to run test locally.
 1. Check if docker is installed: docker --version.
-2. Run a clone of the project: git clone https://github.com/qafro1/hello.git and change into that directory.
-3. Build the app which build the image of app with tag hello-python: docker build -t hello-python .
-4. Run the app locally: docker run --name hello-python -p 5000:5000 hello-python
+2. Run a clone of the project: git clone https://github.com/qafro1/hello.git or get source locally then change into that directory.
+3. Build the app which build the image of app with tag python-hello: docker build -t python-hello .
+4. Run the app locally: docker run --name python-hello -p 5000:5000 python-hello
 5. Test the app if it's running successfully with port 5000: curl http://localhost:5000
 6. Result display: Hello World...*
 
 
 <br>Running</br>
-This project will deploy hello-python python app to kubernetes cluster using minikube.
+This project will deploy python-hello python app to kubernetes cluster using minikube.
 This section will get Minikube up running and deploy the kubernetes manifest files.
 Assumming the Minikube & kubectl are configured.
-Also the docker image used as stated: qafro/hello-python
+Also the docker image used as stated: qafro/python-hello
 
 To deploy it using minikube, we are using deploy.yaml and service.yaml configuration file, which will tell the Kubernetes cluster the configuration.
 1. minikube server needs to run: minikube start
@@ -70,7 +70,7 @@ To deploy it using minikube, we are using deploy.yaml and service.yaml configura
 3. Create a deployment: kubectl apply -f deploy.yaml
 4. Create a create a service: kubectl apply -f service.yaml
 5. Check both kubernates deployment & service are running: kubectl get deploy,svc
-6. To display the result in a browser: minikube service hello-python
+6. To display the result in a browser: minikube service python-hello
 7. Result display : Hello World...*
 
 
