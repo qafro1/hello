@@ -41,8 +41,9 @@ Documentation to Set up automated builds for docker: https://docs.docker.com/doc
 
 <br>Create docker image from cli:</br>
 1. docker login
-2. docker tag local-image:tagname new-repo:tagname
-3. docker push new-repo:tagname
+2. docker images
+3. docker tag local-image:tagname new-repo:tagname
+4. docker push new-repo:tagname
 
 
 Minikube & kubectl should be configured according to the Documentations.
