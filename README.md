@@ -44,7 +44,7 @@ Minikube & kubectl should be configured according to the Documentations.
 <br>Testing</br>
 In the dev environment - steps to run test locally.
 1. Check if docker is installed: docker --version.
-2. Run a clone of the project: git clone https://github.com/qafro1/hello.git and change into that directory : cd app
+2. Run a clone of the project: git clone https://github.com/qafro1/hello.git and change into that directory.
 3. Build the app which build the image of app with tag hello-python: docker build -t hello-python .
 4. Run the app locally: docker run --name hello-python -p 5000:5000 hello-python
 5. Test the app if it's running successfully with port 5000: curl http://localhost:5000
