@@ -14,12 +14,12 @@ spec:
         app: hello-python
     spec:
       containers:
-      - name: hello-python
-        image: qafro/python-hello:v1 #image of hello python
-        imagePullPolicy: Always
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        ports:
-        - containerPort: 5000   #Pod port number 
+        - name: hello-python
+          image: qafro/python-hello:v1 #image of hello python
+          imagePullPolicy: Always
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 5000 #Pod port number
