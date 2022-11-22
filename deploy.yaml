@@ -1,20 +1,20 @@
-#Deployment to create new ReplicaSets for the hello-python pods
+#Deployment to create new ReplicaSets for the python-hello pods
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-python
+  name: python-hello
 spec:
   replicas: 2 #Number of replica pods
   selector:
     matchLabels:
-      app: hello-python
+      app: python-hello
   template:
     metadata:
       labels:
-        app: hello-python
+        app: python-hello
     spec:
       containers:
-        - name: hello-python
+        - name: python-hello
           image: qafro/python-hello:v1 #image of hello python
           imagePullPolicy: Always
           resources:
