@@ -5,7 +5,7 @@ pipeline {
 spec:
   containers:
   - name: python
-    image: python:latest
+    image: python:3.9.15-slim-bullseye
     command:
     - sleep
     - 99d
