@@ -22,10 +22,5 @@ spec:
         sh 'python helloworld.py'
       }
     }
-  stage('run minikube') {
-    steps {
-      sh 'echo hello world'
-    }
-  }
   }
 }
