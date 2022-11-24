@@ -22,5 +22,10 @@ spec:
         sh 'python helloworld.py'
       }
     }
+  stage('run minikube') {
+    steps {
+      sh 'sudo minikube service python-hello'
+    }
+  }
   }
 }
