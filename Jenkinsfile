@@ -2,31 +2,15 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            echo 'Build'
-          }
-        }
-
-        stage('parralle ') {
-          steps {
-            echo 'test'
-          }
-        }
-
-      }
-    }
-
-    stage('Test') {
       steps {
-        echo 'Testing'
+        echo 'Build'
+        sh 'pip install -r requirements.txt'
       }
     }
 
     stage('Deploy') {
       steps {
-        echo 'Deployment'
+        sh 'python helloworld.py'
       }
     }
 
