@@ -1,16 +1,26 @@
 pipeline {
   agent {
-    dockerfile {
-      filename 'Dockerfile'
+    kubernetes {
+      yaml '''
+spec:
+  containers:
+  - name: python
+    image: python:latest
+    command:
+    - sleep
+    - 99d
+  terminationGracePeriodSeconds: 3
+      '''
+      defaultContainer 'python'
+      retries 2
     }
-
   }
   stages {
-    stage('Test') {
+    stage('Build') {
       steps {
-        echo 'test'
+        sh 'pip install -r requirements.txt'
+        sh 'python helloworld.py'
       }
     }
-
   }
 }
