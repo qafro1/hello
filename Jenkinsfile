@@ -24,7 +24,7 @@ spec:
     }
   stage('run minikube') {
     steps {
-      sh 'sudo minikube service python-hello'
+      sh 'echo hello world'
     }
   }
   }
